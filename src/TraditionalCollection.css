@@ -1,0 +1,257 @@
+.traditional-page {
+  min-height: 100vh;
+  background: #090807;
+  color: #f4efe5;
+}
+
+.traditional-header {
+  height: 88px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.traditional-header button {
+  background: none;
+  border: none;
+  color: #d8d0c2;
+  cursor: pointer;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.traditional-header button:hover {
+  color: #e5c889;
+}
+
+.traditional-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.traditional-logo span {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 29px;
+  letter-spacing: 6px;
+  color: #e5c889;
+}
+
+.traditional-logo small {
+  font-size: 7px;
+  letter-spacing: 4px;
+  margin-top: 5px;
+}
+
+.traditional-header > a {
+  border: 1px solid #c9a45c;
+  padding: 12px 20px;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.traditional-header > a:hover {
+  background: #c9a45c;
+  color: #090807;
+}
+
+.traditional-hero {
+  min-height: 430px;
+  padding: 90px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background:
+    linear-gradient(rgba(9, 8, 7, 0.78), rgba(9, 8, 7, 0.93)),
+    url("https://images.unsplash.com/photo-1611085583191-a3b181a88401?auto=format&fit=crop&w=1800&q=85")
+      center / cover;
+}
+
+.traditional-hero > p:first-child {
+  color: #e5c889;
+  font-size: 9px;
+  letter-spacing: 4px;
+}
+
+.traditional-hero h1 {
+  margin: 25px 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(65px, 9vw, 115px);
+  line-height: 0.8;
+  font-weight: 500;
+}
+
+.traditional-hero h1 span {
+  color: #e5c889;
+  font-style: italic;
+}
+
+.traditional-hero > div {
+  width: 70px;
+  height: 1px;
+  background: #c9a45c;
+}
+
+.traditional-hero > p:last-child {
+  max-width: 500px;
+  margin-top: 25px;
+  color: #9b958b;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.traditional-products {
+  padding: 110px 7%;
+}
+
+.traditional-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 55px;
+}
+
+.traditional-heading p {
+  color: #e5c889;
+  font-size: 9px;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+}
+
+.traditional-heading h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 58px;
+  font-weight: 500;
+}
+
+.traditional-heading > span {
+  color: #777168;
+  font-size: 11px;
+}
+
+.traditional-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.traditional-card {
+  background: #12110f;
+  transition: 0.4s ease;
+}
+
+.traditional-card:hover {
+  transform: translateY(-7px);
+}
+
+.traditional-image {
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+.traditional-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.6s;
+}
+
+.traditional-card:hover img {
+  transform: scale(1.06);
+}
+
+.traditional-image span {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 8px 11px;
+  background: rgba(0, 0, 0, 0.78);
+  color: #e5c889;
+  font-size: 8px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.traditional-info {
+  padding: 23px;
+}
+
+.traditional-info h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 27px;
+  font-weight: 500;
+}
+
+.traditional-info > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 18px;
+  padding-top: 17px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.traditional-info strong {
+  color: #e5c889;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.traditional-info a {
+  font-size: 9px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.traditional-info a:hover {
+  color: #e5c889;
+}
+
+@media (max-width: 1000px) {
+  .traditional-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .traditional-header {
+    padding: 0 5%;
+  }
+
+  .traditional-header > a {
+    display: none;
+  }
+
+  .traditional-products {
+    padding: 80px 6%;
+  }
+
+  .traditional-heading {
+    display: block;
+  }
+
+  .traditional-heading h2 {
+    font-size: 48px;
+  }
+
+  .traditional-heading > span {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .traditional-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .traditional-image {
+    height: 450px;
+  }
+}
+
